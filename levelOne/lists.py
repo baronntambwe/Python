@@ -1,24 +1,17 @@
-# manipulating numbers
 
-mystring = "I'am here to do things"
+my_list = [3,4,3,'helooe',True, ['a',4,5]] # can hold differnt types
 
-#print(mystring[5])
-#print(mystring[-1]) #Returns last index
+size = len(my_list)
+my_list.append("new item")
+my_list.extend([9,40,3,4])
+remove_last = my_list.pop()
+remove_any = my_list.pop(4)
+index_neasted = my_list[5][0]
 
-# sliciing
+# list comprehension
 
-#print(mystring[2:]) 
-#print(mystring[:5]) 
-#print(mystring[::2])
-# strings are imutable: mystring[5] = 'x'
+matrix = [[1,2,3], [4,5,6], [7,8,9]]
+firt_column = [row[0] for row in matrix]
+second_column = [row[1] for row in matrix]
 
-# methods
-
-s = mystring.upper()
-
-# format
-
-s = "I wanna format this string with: {x} and an {y}".format(x = "a method", y = "argument")
-s = "I wanna format this string with: {} and an {}".format("a method", "argument")
-print(s)
-
+print(second_column)
