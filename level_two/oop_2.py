@@ -28,7 +28,14 @@ class Book():
     
     def __str__(self):
         return "Title: {}, Author: {}, Pages: {}".format( self.title, self.author,self.pages)
+    
+    def __len__(self):
+        return self.pages
+    
+    def __del__(self):
+        print("A book was destroyed")
 
 book = Book("Dance", "Jean", 852)
 print(book)
-
+print(len(book))
+del book
