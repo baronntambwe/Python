@@ -8,6 +8,7 @@ def multi_re_find(patterns, phrase):
     
 
 test_phrase = "sddsd...sddsd....sddsd...sdddssddd....sdddsd...sddsddd"
-test_pattern = ['sd*']
+test_pattern = ['sd*'] # 0 or more d
+test_pattern = ['sd+'] # 0 or more d
 
 multi_re_find(test_pattern,test_phrase)
