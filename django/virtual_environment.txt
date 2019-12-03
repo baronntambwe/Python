@@ -1,0 +1,25 @@
+
+# Creating vitual environment
+
+conda create --name myDjangoEnv django
+conda create --name myDjangoEnv python=3.5
+
+# To activate this environment, use
+#
+#     $ conda activate myDjangoEnv
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+# * For power-users (mac) using bash, you must use source
+
+source activate myDjangoEnv
+
+# To list environments
+
+conda info --envs
+
+# To create django project
+
+django-admin startproject first-project

@@ -43,3 +43,5 @@ def func_needs_decorator():
 
 # Its the same thing as 
 # func_needs_decorator = new_decorator(func_needs_decorator
+
+func_needs_decorator()
