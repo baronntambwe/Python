@@ -22,4 +22,12 @@ conda info --envs
 
 # To create django project
 
-django-admin startproject first-project
+django-admin startproject first_project
+
+# To run a project
+
+python manage.py runserver
+
+# To start a new app
+
+python manage.py startapp first_app
