@@ -1,4 +1,4 @@
-## To run the DJango API project
+# To run the DJango API project
 
 
 ### Create a virtual environment to isolate our package dependencies locally
