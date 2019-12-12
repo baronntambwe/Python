@@ -1,18 +1,39 @@
-# To run the DJango API project
+### DJANGO API PROJECT
+
+#### Description
+
+This is a Python App api that accepts a rest request to allow admin users to view and edit the users and groups in the system.
+
+The response to the rest request returns whether the api call  was successful and a list of users available.
+
+#### Lanuage Used
+
+> Python
+
+#### Technology Requirements
+
+> Django and 
+> djangorestframework
 
 
-### Create a virtual environment to isolate our package dependencies locally
-python3 -m venv env
-source env/bin/activate  (On Windows use `env\Scripts\activate`)
+#### How to run the project
 
-### Install Django and Django REST framework into the virtual environment
-pip install django
-pip install djangorestframework
+`git clone https://github.com/baronntambwe/Python.git`
 
-### We're now ready to test the API we've built. Let's fire up the server from the command line.
+`cd api_tutorial`
 
-python manage.py runserver
+`python3 -m venv env`
 
-### We can now access our API, both from the command-line, using tools like curl...
+`source env/bin/activate` or on Windows use `env\Scripts\activate`
 
-curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
+`pip install django` 
+`pip install djangorestframework`
+`python manage.py runserver`
+
+
+
+#### How to run the tests
+
+`curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
+
+
