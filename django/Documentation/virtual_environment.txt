@@ -31,3 +31,10 @@ python manage.py runserver
 # To start a new app
 
 python manage.py startapp first_app
+
+# To do a migration
+
+Step 1: python manage.py migrate  # creates a migration
+Step 2: python manage.py makemigrations first_app  # registers newly crated migrations into the app
+Step 3: python manage.py migrate  # Complete the migration process
+
