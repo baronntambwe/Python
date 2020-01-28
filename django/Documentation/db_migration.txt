@@ -6,8 +6,36 @@ Step 1: python manage.py migrate  # creates a migration
 Step 2: python manage.py makemigrations first_app  # registers newly crated migrations into the app
 Step 3: python manage.py migrate  # Complete the migration process
 
-# To verify the newly careated migration
+# To verify the newly careated migration using the Shell
 
 Step 1: python manage.py shell  # Launch an interactive shell
 Step 2: from first_app.models import Topic
-Step 3: print(Topic.objects.all())
+Step 3: print(Topic.objects.all()) # It will return empty result
+Setp 4: t = Topic(top_name = "Social Network")
+Setp 5: t.save()
+Setp 6: print(Topic.objects.all()) # It will return the newly created result
+Setp 7: quit()
+
+# To verify the newly careated migration using the admin interface
+
+Step 1: Register all the models in the admin.py file of the app
+Step 2: Create a super user
+        - python manage.py createsuperuser
+        - username: baron
+        - email: baronbabutuke@gmail.com
+        - pwd: baron123
+Step 3: python manage.py runserver
+Setp 4: http://127.0.0.1:8000/admin
+
+
+# To populate wth fake data
+
+Step 1: pip install Faker  # Installs the faker tool
+Step 2: Create a new file at the firt_project folder level called populate_first_app.py
+Step 3: Write the population script in that file
+Setp 4: 
+Setp 5: 
+Setp 6: print(Topic.objects.all()) # It will return the newly created result
+Setp 7: quit()
+
+
