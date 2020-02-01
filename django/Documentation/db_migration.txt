@@ -2,7 +2,7 @@
 
 # To do a migration
 
-Step 1: python manage.py migrate  # creates a migration
+Step 1: python manage.py migrate  # creates a migration (First time only)
 Step 2: python manage.py makemigrations first_app  # registers newly crated migrations into the app
 Step 3: python manage.py migrate  # Complete the migration process
 
@@ -19,7 +19,7 @@ Setp 7: quit()
 # To verify the newly careated migration using the admin interface
 
 Step 1: Register all the models in the admin.py file of the app
-Step 2: Create a super user
+Step 2: Create a super user (If its the first time)
         - python manage.py createsuperuser
         - username: baron
         - email: baronbabutuke@gmail.com
@@ -33,8 +33,8 @@ Setp 4: http://127.0.0.1:8000/admin
 Step 1: pip install Faker  # Installs the faker tool
 Step 2: Create a new file at the firt_project folder level called populate_first_app.py
 Step 3: Write the population script in that file
-Setp 4: 
-Setp 5: 
+Setp 4: python populate_first_app.py
+Setp 5: repeat the shell setting steps
 Setp 6: print(Topic.objects.all()) # It will return the newly created result
 Setp 7: quit()
 

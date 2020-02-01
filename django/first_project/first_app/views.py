@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from first_app.models import Topic, WebPage, AccessRecord
+from first_app.models import Topic, WebPage, AccessRecord, User
 
 # Create your views here.
 
@@ -9,3 +9,9 @@ def index(request):
     date_dict = {'access_records': webpages_list}
 
     return render(request, "first_app/index.html", context=date_dict)
+
+def user(request):
+    users_list = User.objects.order_by('email')
+    user_dict = {'users_records': users_list}
+
+    return render(request, "first_app/user.html", context=user_dict)

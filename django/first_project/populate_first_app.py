@@ -7,7 +7,7 @@ django.setup()
 ## FAKE POPULATION SCRIPT
 
 import random
-from first_app.models import Topic, AccessRecord, WebPage
+from first_app.models import Topic, AccessRecord, WebPage, User
 from faker import Faker
 
 fakegen = Faker()
@@ -20,7 +20,6 @@ def add_topic():
 
 def populate(N=5):
 
-   
     for entry in range(N):
 
             # get the Topic for the entry
@@ -36,6 +35,15 @@ def populate(N=5):
 
             # create a fake access record for that webpage
             acc_rec = AccessRecord.objects.get_or_create(name=webpg, date=fake_date)[0]
+
+            # create the fake data for the user
+            fake_firstName = fakegen.first_name()
+            fake_lastName = fakegen.last_name()
+            fake_email = fakegen.email()
+
+            # create fake user
+            user = User.objects.get_or_create(firstName=fake_firstName, lastName=fake_lastName, email=fake_email)
+
 
 if __name__ == '__main__':
     print('Populating fake data')

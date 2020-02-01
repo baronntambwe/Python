@@ -23,3 +23,11 @@ class AccessRecord(models.Model):
 
     def __str__(self):
         return str(self.date)
+
+class User(models.Model):
+    firstName = models.CharField(max_length=24)
+    lastName = models.CharField(max_length=24)
+    email = models.EmailField(max_length=24, unique=True)
+
+    def __str__(self):
+        return self.firstName
